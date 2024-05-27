@@ -4,20 +4,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-      #container {
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
         width: 70%;
         height: 100vh;
         display: flex;
-        justify-content: center;
+        margin: 0 auto;
         flex-direction: column;
         background-color: #ecfaf8;
         align-items: center;
-        margin-left: 15%;
-      }
+        
+
+       }
+       @media screen and (max-width: 600px) {
+  .container {
+    width: 100%; /* Adjust width for smaller screens */
+  }
+}
       #logo {
-        width: 50px;
-        height: 30px;
+        width:20px;
+        height: 20px;
         margin-left: 40px;
       }
 
@@ -28,42 +40,100 @@
         justify-content: center;
         background-color: #fff;
         border-radius: 10px;
+        margin: auto;
       }
 
       .font {
-        font-size: 20px;
+        font-size: 15px;
         font-weight: bold;
-        margin-top: 5px;
-        margin-left: 215px;
+        margin-top: 6px;
+        margin-left: 225px;
         display: flex;
         align-items: center;
         margin-bottom: 0%;
       }
       .text {
-        margin-top: 0;
-        font-size: small;
+        margin:auto;
+        font-size: 10px;
         margin-top: 0%;
-        margin-right: 70px;
+        margin-right: 140px;
+
       }
       .ctn {
         display: flex;
         justify-content: space-between;
         width: 95%;
-        margin-top: 0%;
-        margin-right: auto;
+        
       }
       #btn {
         background-color: blue;
         color: #fff;
         border-radius: 5px;
       }
+      #Search {
+        color: #000;
+      }
+      .bar{
+  margin:0 auto;
+  width:500px;
+  border-radius:30px;
+  border:1px solid #dcdcdc;
+  background-color: #E6ECEB;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.searchbar{
+  height:45px;
+  border:none;
+  width:400px;
+  font-size:16px;
+  outline: none;
+  background-color: #E6ECEB;
+  text-align: center;
+  
+}
+.search{
+  height:20px;
+  position:relative;
+  top:5px;
+  left:10px;
+}
+hr{
+  width: 45%;
+  display: flex;
+  margin: auto;
+  
+}
+h1{
+  margin-top: 25px;
+}
+#md{
+  color: #0024A6;
+  font-size: large;
+  font-weight: bold;
+  margin-top: 0%;
+}
+#ca{
+  color: #49CBB9;
+  font-size: large;
+  font-weight: 400;
+}
+      #logotext {
+  display: flex;
+  width:100px;
+  margin-top: auto;
+ }
+
+
+
     </style>
   </head>
   <body>
-    <div id="container">
+    <div class="container">
       <div class="ctn">
-        <div>
+        <div id="logotext">
           <img id="logo" src="logo-removebg-preview.png" alt="" />
+          <span id="md">Medi</span><span id="ca">care</span>
         </div>
         <div>
           <button id="btn">Log in</button>
@@ -72,9 +142,10 @@
       
       <div id="box">
         <h1>Patients</h1>
-        <div id="input">
-            <input type="search" placeholder="search..."/>
-          </div>
+        <div class="bar">
+          <a href="#"><i id="Search" class="fa-solid fa-magnifying-glass"></i></a>
+          <input class="searchbar" type="text" placeholder="search...">
+                  </div>
         <span class="font">Priscilla J. Minjares<br /></span>
         <span class="text"
           >Southside Regional Medical Center, DOB: 05/06/1937</span
